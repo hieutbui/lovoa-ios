@@ -12,7 +12,10 @@ import SwiftData
 struct LovoaApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Partnership.self,
+            AuraState.self,
+            Milestone.self,
+            TimelineEntry.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
