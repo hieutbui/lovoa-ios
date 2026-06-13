@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ProfileView: View {
+struct Profile: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var auras: [AuraState]
     @Query private var partnerships: [Partnership]
@@ -106,6 +106,6 @@ struct OfflineCycleLogPlaceholder: View {
 }
 
 #Preview {
-    ProfileView()
+    Profile()
         .modelContainer(for: [AuraState.self, Partnership.self], inMemory: true)
 }

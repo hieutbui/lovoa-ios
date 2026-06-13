@@ -15,23 +15,23 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             
             // TAB 1: DASHBOARD STREAM
-            HomeDashboardView()
+            HomeDashboard()
                 .tabItem {
-                    Label("Dashboard", systemImage: "house")
+                    Label(Constants.dashboardString, systemImage: Constants.dashboardIcon)
                 }
                 .tag(0)
             
             // TAB 2: CO-DIARY TIMELINE
-            TimelineListView()
+            Timeline()
                 .tabItem {
-                    Label("Timeline", systemImage: "calendar.day.timeline.left")
+                    Label(Constants.timelineString, systemImage: Constants.timelineIcon)
                 }
                 .tag(1)
             
             // TAB 3: USER PROFILE & SETTINGS
-            ProfileView()
+            Profile()
                 .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle.fill")
+                    Label(Constants.profileString, systemImage: Constants.ProfileIcon)
                 }
                 .tag(2)
         }

@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct TimelineList: View {
+struct Timeline: View {
     @Query private var entries: [TimelineEntry]
     
     var body: some View {
@@ -32,6 +32,6 @@ struct TimelineList: View {
 }
 
 #Preview {
-    TimelineListView()
+    Timeline()
         .modelContainer(for: [TimelineEntry.self], inMemory: true)
 }

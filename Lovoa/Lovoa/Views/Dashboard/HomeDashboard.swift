@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct HomeDashboardView: View {
+struct HomeDashboard: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var partnership: [Partnership]
     @Query private var auras: [AuraState]
@@ -85,6 +85,6 @@ struct HomeDashboardView: View {
 }
 
 #Preview {
-    HomeDashboardView()
+    HomeDashboard()
         .modelContainer(for: [AuraState.self, Partnership.self, Milestone.self], inMemory: true)
 }
