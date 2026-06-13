@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct TimelineListView: View {
+struct TimelineList: View {
     @Query private var entries: [TimelineEntry]
     
     var body: some View {
